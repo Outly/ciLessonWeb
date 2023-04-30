@@ -1,0 +1,4 @@
+tests\BaseTest.class
+tests\FirstSelenideTest.class
+config\ProjectConfig.class
+pages\HomePage.class
