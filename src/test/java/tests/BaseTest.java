@@ -26,6 +26,8 @@ public abstract class BaseTest {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--headless");
+        chromeOptions.addArguments("--no-sandbox");
+        chromeOptions.addArguments("--disable-dev-shm-usage");
     }
     @AfterAll
     public static void turnDown() {
