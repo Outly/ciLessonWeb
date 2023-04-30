@@ -11,6 +11,6 @@ public class FirstSelenideTest extends BaseTest {
     public void firstTest() {
        homePage
                .openPage()
-               .checkRegisterButtonText("Зарегистрироватьсяd");
+               .checkRegisterButtonText("Зарегистрироваться");
     }
 }
