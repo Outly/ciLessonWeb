@@ -9,6 +9,7 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public abstract class BaseTest {
 
@@ -23,6 +24,8 @@ public abstract class BaseTest {
         Configuration.browserSize = "1366x768";
         Configuration.timeout = 5000;
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--headless");
     }
     @AfterAll
     public static void turnDown() {
