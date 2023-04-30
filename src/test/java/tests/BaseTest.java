@@ -21,13 +21,10 @@ public abstract class BaseTest {
         WebDriverManager.chromedriver().setup();
         Configuration.browser = "chrome";
         Configuration.driverManagerEnabled = true;
-        Configuration.browserSize = "1366x768";
+        Configuration.browserSize = "1920x1080";
         Configuration.timeout = 5000;
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-        ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("--headless");
-        chromeOptions.addArguments("--no-sandbox");
-        chromeOptions.addArguments("--disable-dev-shm-usage");
+        System.setProperty("chromeoptions.args", "\"--no-sandbox\",\"--disable-dev-shm-usage\",\"--remote-debugging-port=9222\"");
     }
     @AfterAll
     public static void turnDown() {
