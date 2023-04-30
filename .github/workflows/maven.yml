@@ -19,9 +19,9 @@ jobs:
         run: ./cm selenoid-ui start
       - name: "Использование main репозитория"
         uses: actions/checkout@v2
-          with:
-            submodules: 'true'
-            token: ${{ secrets.PAT_TOKEN }}
+        with:
+          submodules: 'true'
+          token: ${{ secrets.PAT_TOKEN }}
       - name: "Запуск тестов"
         run: mvn clean test
         continue-on-error: true
