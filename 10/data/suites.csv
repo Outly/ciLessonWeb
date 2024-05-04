@@ -1,2 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"failed","Tue May 02 13:33:02 GMT 2023","Tue May 02 13:33:14 GMT 2023","12496","","tests.FirstSelenideTest","","tests.FirstSelenideTest","firstTest","firstTest()",""
