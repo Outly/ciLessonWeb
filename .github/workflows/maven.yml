@@ -9,27 +9,15 @@ jobs:
 
     steps:
 
-      - name: "Скачивание selenoid"
-        run: curl -s https://aerokube.com/cm/bash  | bash
-      - name: "Расширение прав на запуск selenoid"
-        run: chmod +x ./cm
-      - name: "Запуск selenoid"
-        run: ./cm selenoid start --vnc
-      - name: "Запуск selenoid-ui"
-        run: ./cm selenoid-ui start
+      - uses: browser-actions/setup-chrome@v1
+        with:
+          chrome-version: 120
+          install-dependencies: true
       - name: "Использование main репозитория"
         uses: actions/checkout@v3
-
       - name: "Запуск тестов"
         run: mvn clean test
         continue-on-error: true
-
-      - name: Upload artifact
-        uses: actions/upload-artifact@v1
-        with:
-          name: surefire-reports
-          path: target/surefire-reports/**
-
       - name: "Генерация allure report"
         uses: simple-elf/allure-report-action@master
         id: allure-report
