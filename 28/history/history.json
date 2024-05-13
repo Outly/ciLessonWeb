@@ -1,1 +1,0 @@
-{"15ee28186e29fe9720b8d1f3fa7c197d":{"statistic":{"failed":0,"broken":1,"skipped":0,"passed":0,"unknown":0,"total":1},"items":[{"uid":"875a7ca5501f100a","reportUrl":"https://Outly.github.io/ciLessonWeb/28//#testresult/875a7ca5501f100a","status":"broken","statusDetails":"Class not found: opera","time":{"start":1715611144695,"stop":1715611144822,"duration":127}}]}}
