@@ -18,7 +18,7 @@ public abstract class BaseTest {
     public static void setUp() {
 
         WebDriverManager.operadriver().setup();
-        Configuration.browser = "opera";
+        Configuration.browser = "operablink";
         Configuration.driverManagerEnabled = true;
         Configuration.headless = false;
         Configuration.browserSize = "1920x1080";
