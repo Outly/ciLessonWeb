@@ -17,8 +17,9 @@ public abstract class BaseTest {
     @BeforeAll
     public static void setUp() {
 
-        WebDriverManager.operadriver().setup();
-        Configuration.browser = "operablink";
+        WebDriverManager.chromedriver().setup();
+        Configuration.remote = "http://localhost:4444/wd/hub";
+        Configuration.browser = "chrome";
         Configuration.driverManagerEnabled = true;
         Configuration.headless = false;
         Configuration.browserSize = "1920x1080";
