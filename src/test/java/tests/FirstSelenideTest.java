@@ -12,6 +12,5 @@ public class FirstSelenideTest extends BaseTest {
        homePage
                .openPage()
                .checkRegisterButtonText("Зарегистрироваться");
-        // п
     }
 }
